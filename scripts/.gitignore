@@ -1,0 +1,22 @@
+# Ignore Python virtual environment
+env/
+venv/
+*.pyc
+__pycache__/
+
+# Ignore Minimap2 build directory if it might change
+minimap2/
+
+# Ignore results directory to avoid tracking output files
+results/
+
+# Ignore any log files
+*.log
+
+# Ignore IDE/editor settings (e.g., VSCode or JetBrains)
+.vscode/
+.idea/
+
+# Ignore OS-generated files
+.DS_Store
+Thumbs.db
