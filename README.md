@@ -77,3 +77,27 @@ This script will automatically activate the virtual environment, run the analysi
 3. Enrichment Analysis (`mutation_enrichment.csv`):
 
    - Enrichment is calculated as the difference in mutation percentages between Dataset 1 and Dataset 2 for each position.
+     
+### Visualizations
+The analysis includes 15 plots in total to visualize mutation frequencies and enrichment values:
+
+#### Dataset 1 Plots
+1. **Total Mutation Frequency**: Mutation percentage across all positions.
+2. **A Mutation Frequency**: Mutation percentage at positions where `A` differs from the template.
+3. **T Mutation Frequency**: Mutation percentage at positions where `T` differs from the template.
+4. **C Mutation Frequency**: Mutation percentage at positions where `C` differs from the template.
+5. **G Mutation Frequency**: Mutation percentage at positions where `G` differs from the template.
+
+#### Dataset 2 Plots
+1. **Total Mutation Frequency**: Mutation percentage across all positions.
+2. **A Mutation Frequency**: Mutation percentage at positions where `A` differs from the template.
+3. **T Mutation Frequency**: Mutation percentage at positions where `T` differs from the template.
+4. **C Mutation Frequency**: Mutation percentage at positions where `C` differs from the template.
+5. **G Mutation Frequency**: Mutation percentage at positions where `G` differs from the template.
+
+#### Enrichment Plots
+1. **Total Enrichment**: Difference in total mutation percentages between Dataset 1 and Dataset 2.
+2. **A Enrichment**: Difference in mutation percentages for `A` mutations between Dataset 1 and Dataset 2.
+3. **T Enrichment**: Difference in mutation percentages for `T` mutations between Dataset 1 and Dataset 2.
+4. **C Enrichment**: Difference in mutation percentages for `C` mutations between Dataset 1 and Dataset 2.
+5. **G Enrichment**: Difference in mutation percentages for `G` mutations between Dataset 1 and Dataset 2.
