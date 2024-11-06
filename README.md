@@ -16,6 +16,12 @@ mutation_analysis/
 │   ├── run_analysis.sh     # Main script to run the entire analysis
 │   └── setup.sh            # Script to set up dependencies and environment
 ```
+## Input Requirements
+To run this analysis, you will need:
+
+- **Two BAM Files**: These files, generated from sequencing experiments, contain the aligned reads to be analyzed and compared. Place them in the inputs directory and specify their paths in config.env.
+- **Reference Template FASTA File**: This file provides the reference genome or sequence against which mutations in the BAM files are identified. Place this in the inputs directory and specify the path in config.env.
+
 ## Setup Instructions
 1. Clone the Repository
 ```bash
@@ -39,7 +45,6 @@ export REFERENCE_FILE="$INPUT_DIR/template.fasta"
 export BAM_FILE_1="$INPUT_DIR/dataset1.bam"  # Update with actual filename
 export BAM_FILE_2="$INPUT_DIR/dataset2.bam"  # Update with actual filename
 ```
-
 3. Run the Setup Script
 
 The setup script:
