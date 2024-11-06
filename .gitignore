@@ -21,9 +21,6 @@ __pycache__/
 *.log
 *.tmp
 
-# Ignore configuration and sensitive files
-config.env
-
 # Ignore IDE/editor config files
 .vscode/
 .idea/
@@ -32,16 +29,3 @@ config.env
 .DS_Store
 *.swp
 
-*.sam
-*.csv
-
-# Ignore configuration and sensitive files
-config.env
-
-# Ignore IDE/editor config files
-.vscode/
-.idea/
-
-# Ignore Mac and Linux system files
-.DS_Store
-*.swp
