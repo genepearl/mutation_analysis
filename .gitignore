@@ -1,0 +1,47 @@
+# Ignore Python virtual environment
+env/
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Ignore temporary or log files
+*.log
+*.tmp
+
+# Ignore output files
+# Ignore Python virtual environment
+env/
+
+# Ignore compiled Python files
+__pycache__/
+*.py[cod]
+
+# Ignore temporary or log files
+*.log
+*.tmp
+
+# Ignore configuration and sensitive files
+config.env
+
+# Ignore IDE/editor config files
+.vscode/
+.idea/
+
+# Ignore Mac and Linux system files
+.DS_Store
+*.swp
+
+*.sam
+*.csv
+
+# Ignore configuration and sensitive files
+config.env
+
+# Ignore IDE/editor config files
+.vscode/
+.idea/
+
+# Ignore Mac and Linux system files
+.DS_Store
+*.swp

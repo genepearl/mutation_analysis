@@ -1,0 +1,6 @@
+pysam
+pandas
+matplotlib
+numpy
+biopython
+
