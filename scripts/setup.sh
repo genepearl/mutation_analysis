@@ -4,6 +4,14 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 source "$SCRIPT_DIR/config.env"
 
+# Ensure the results directory exists
+if [ ! -d "$RESULTS_DIR" ]; then
+    echo "Creating results directory at $RESULTS_DIR..."
+    mkdir -p "$RESULTS_DIR"
+else
+    echo "Results directory already exists."
+fi
+
 # Ensure Minimap2 is installed (cloning and building if not present)
 if [ ! -d "$MINIMAP_DIR" ]; then
     echo "Cloning Minimap2 repository..."
@@ -35,9 +43,6 @@ source "$VENV_DIR/bin/activate"
 echo "Upgrading pip and installing required packages..."
 pip install --upgrade pip --break-system-packages
 pip install -r "$SCRIPTS_DIR/requirements.txt" --break-system-packages
-
-# Deactivate virtual environment
-deactivate
 
 # Copy the reference file to the Minimap2 test folder
 echo "Copying reference file to Minimap2 test folder..."
