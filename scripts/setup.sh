@@ -41,8 +41,8 @@ echo "Activating virtual environment..."
 source "$VENV_DIR/bin/activate"
 
 echo "Upgrading pip and installing required packages..."
-pip install --upgrade pip --break-system-packages
-pip install -r "$SCRIPTS_DIR/requirements.txt" --break-system-packages
+pip install --upgrade pip 
+pip install -r "$SCRIPTS_DIR/requirements.txt" 
 
 # Copy the reference file to the Minimap2 test folder
 echo "Copying reference file to Minimap2 test folder..."
