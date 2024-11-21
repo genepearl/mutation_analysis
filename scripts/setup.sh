@@ -31,8 +31,8 @@ else
 fi
 
 # Install Samtools in tools directory
-SAMTOOLS_DIR="$TOOLS_DIR/samtools"
-if [ ! -f "$SAMTOOLS_DIR/samtools" ]; then
+SAMTOOLS_DIR="$(dirname "$SAMTOOLS")"
+if [ ! -f "$SAMTOOLS" ]; then
     echo "Samtools not found. Installing in $TOOLS_DIR..."
     SAMTOOLS_VERSION="1.19.2"
     SAMTOOLS_TAR="samtools-$SAMTOOLS_VERSION.tar.bz2"
