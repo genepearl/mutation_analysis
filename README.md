@@ -5,6 +5,7 @@ This project is a mutation analysis tool that processes BAM files, aligns them w
 ## Project Structure
 ```bash
 mutation_analysis/
+├── env/                  # Virtual environment directory (created by the setup script)
 ├── inputs/               # Input files, such as BAM files and reference FASTA
 ├── results/              # Output files, including processed FASTA, SAM files, and analysis results
 ├── tools/                # Tools like Minimap2 and Samtools installed here
@@ -15,6 +16,7 @@ mutation_analysis/
 │   ├── requirements.txt     # Required Python packages
 │   ├── run_analysis.sh      # Main script to run the entire analysis
 │   └── setup.sh             # Script to set up dependencies and environment
+└── README.md             # Documentation for the project
 ```
 ## Input Requirements
 To run this analysis, you will need:
