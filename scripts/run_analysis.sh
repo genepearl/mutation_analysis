@@ -25,25 +25,6 @@ convert_bam_to_fasta "$BAM_FILE_2" "$FASTA_FILE_2"
 # Step 2: Process the FASTA files
 echo "Processing FASTA files..."
 
-process_fasta() {
-    local input_file=$1
-    local output_file=$2
-
-    processed_lines=()
-    while read -r line; do
-        if [[ $line == ">"* ]]; then
-            processed_lines+=("$line")
-        else
-            processed_lines+=("${line//[[:space:]]/}")
-        fi
-    done < "$input_file"
-
-    printf "%s\n" "${processed_lines[@]}" > "$output_file"
-}
-
-process_fasta "$FASTA_FILE_1" "$PROCESSED_FASTA_1"
-process_fasta "$FASTA_FILE_2" "$PROCESSED_FASTA_2"
-
 # Remove unprocessed FASTA files
 echo "Removing unprocessed FASTA files..."
 rm "$FASTA_FILE_1" "$FASTA_FILE_2"
