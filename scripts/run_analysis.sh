@@ -4,10 +4,6 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 source "$SCRIPT_DIR/config.env"
 
-# Define paths to tools
-SAMTOOLS="$TOOLS_DIR/samtools/samtools"
-MINIMAP="$MINIMAP_DIR/minimap2"
-
 # Step 1: Convert BAM to FASTA using samtools
 echo "Converting BAM files to FASTA..."
 
@@ -15,7 +11,6 @@ convert_bam_to_fasta() {
     local bam_file=$1
     local fasta_file=$2
 
-    # Use $SAMTOOLS instead of samtools
     if "$SAMTOOLS" fasta "$bam_file" > "$fasta_file"; then
         echo "Converted $bam_file to $fasta_file"
     else
@@ -35,7 +30,7 @@ run_minimap() {
     local input_file=$2
     local output_file=$3
 
-    if "$MINIMAP" -a "$reference" "$input_file" > "$output_file"; then
+    if "$MINIMAP_DIR/minimap2" -a "$reference" "$input_file" > "$output_file"; then
         echo "Minimap2 alignment complete for $input_file."
     else
         echo "Error running Minimap2 on $input_file."
