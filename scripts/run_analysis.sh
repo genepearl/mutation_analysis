@@ -46,8 +46,8 @@ run_minimap() {
 }
 
 # Use the reference file directly from the inputs directory
-run_minimap "$REFERENCE_FILE" "$PROCESSED_FASTA_1" "$SAM_FILE_1"
-run_minimap "$REFERENCE_FILE" "$PROCESSED_FASTA_2" "$SAM_FILE_2"
+run_minimap "$REFERENCE_FILE" "$FASTA_FILE_1" "$SAM_FILE_1"
+run_minimap "$REFERENCE_FILE" "$FASTA_FILE_2" "$SAM_FILE_2"
 
 # Step 4: Run MutationAnalyzer in the virtual environment with RESULTS_DIR
 echo "Running MutationAnalyzer..."
