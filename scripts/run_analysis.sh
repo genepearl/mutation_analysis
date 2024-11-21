@@ -22,14 +22,7 @@ convert_bam_to_fasta() {
 convert_bam_to_fasta "$BAM_FILE_1" "$FASTA_FILE_1"
 convert_bam_to_fasta "$BAM_FILE_2" "$FASTA_FILE_2"
 
-# Step 2: Process the FASTA files
-echo "Processing FASTA files..."
-
-# Remove unprocessed FASTA files
-echo "Removing unprocessed FASTA files..."
-rm "$FASTA_FILE_1" "$FASTA_FILE_2"
-
-# Step 3: Run Minimap2 on the processed FASTA files
+# Step 2: Run Minimap2 on the processed FASTA files
 echo "Running Minimap2..."
 
 run_minimap() {
@@ -49,7 +42,7 @@ run_minimap() {
 run_minimap "$REFERENCE_FILE" "$FASTA_FILE_1" "$SAM_FILE_1"
 run_minimap "$REFERENCE_FILE" "$FASTA_FILE_2" "$SAM_FILE_2"
 
-# Step 4: Run MutationAnalyzer in the virtual environment with RESULTS_DIR
+# Step 3: Run MutationAnalyzer in the virtual environment with RESULTS_DIR
 echo "Running MutationAnalyzer..."
 
 source "$VENV_DIR/bin/activate"
@@ -61,7 +54,7 @@ MUTATION_ENRICHMENT="$RESULTS_DIR/mutation_enrichment.csv"
 
 python3 "$SCRIPTS_DIR/MutationAnalyzer.py" --reference "$REFERENCE_FILE" --sam1 "$SAM_FILE_1" --sam2 "$SAM_FILE_2" --results_dir "$RESULTS_DIR"
 
-# Step 5: Run Plotting Script with specific files
+# Step 4: Run Plotting Script with specific files
 echo "Running Plotting Script..."
 
 python3 "$SCRIPTS_DIR/plot_results.py" --dataset1 "$MUTATION_FREQ_DATASET1" --dataset2 "$MUTATION_FREQ_DATASET2" --enrichment "$MUTATION_ENRICHMENT"
