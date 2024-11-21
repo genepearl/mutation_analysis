@@ -32,7 +32,7 @@ cd mutation_analysis
 
 In the scripts folder, you will find a config.env file. Adjust the paths in this file according to your setup. For example:
 ```bash
- Path to the mutation_analysis folder (adjust this to your local setup)
+# Path to the mutation_analysis folder (adjust this to your local setup)
 export BASE_DIR="$HOME/Downloads/mutation_analysis"
 
 # Input files (place these files in the 'inputs' folder inside BASE_DIR)
